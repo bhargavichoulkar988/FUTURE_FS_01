@@ -1,0 +1,41 @@
+.skills { background:var(--bg-primary); }
+
+.skills-tabs { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:3rem; }
+.skills-tab {
+  display:flex; align-items:center; gap:8px; padding:12px 24px;
+  background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-md);
+  color:var(--text-secondary); font-size:0.9rem; font-weight:500; transition:var(--transition);
+}
+.skills-tab:hover { color:var(--text-primary); border-color:rgba(99,102,241,0.4); }
+.skills-tab.active { background:rgba(79,70,229,0.1); border-color:var(--primary); color:var(--primary); box-shadow:0 0 20px rgba(79,70,229,0.1); }
+
+.skills-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; max-width:900px; margin:0 auto; animation:fadeInUp 0.4s ease forwards; }
+
+.skill-item {
+  background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-md);
+  padding:1.25rem 1.5rem; transition:var(--transition); animation:fadeInUp 0.4s ease both;
+}
+.skill-item:hover { border-color:rgba(79,70,229,0.25); background:var(--bg-card-hover); }
+.skill-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+.skill-name { font-size:0.9rem; font-weight:600; color:var(--text-primary); }
+.skill-pct { font-family:var(--font-code); font-size:0.8rem; color:var(--text-muted); }
+
+.skill-bar { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+.skill-fill {
+  height:100%; width:var(--w); background:var(--c,var(--primary));
+  border-radius:3px; animation:fillBar 1s ease forwards;
+}
+@keyframes fillBar { from{width:0} to{width:var(--w)} }
+
+.tech-cloud { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:3rem; padding-top:3rem; border-top:1px solid var(--border); }
+.tech-tag {
+  padding:8px 20px; background:var(--bg-card); border:1px solid var(--border);
+  border-radius:50px; font-size:0.82rem; font-weight:500; color:var(--text-secondary);
+  transition:var(--transition); font-family:var(--font-code);
+}
+.tech-tag:hover { color:var(--primary); border-color:var(--primary); background:rgba(79,70,229,0.06); }
+
+@media (max-width:640px) {
+  .skills-grid { grid-template-columns:1fr; }
+  .skills-tab { padding:10px 16px; font-size:0.85rem; }
+}
