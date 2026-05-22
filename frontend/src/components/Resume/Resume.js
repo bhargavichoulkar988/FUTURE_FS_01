@@ -14,7 +14,7 @@ export default function Resume() {
         {/* Download Button */}
         <div className="resume-download-bar">
           <a
-            href="/resume.pdf"
+            href="https://raw.githubusercontent.com/bhargavichoulkar988/FUTURE_FS_01/main/frontend/public/resume.pdf"
             download="Bhargavi_Choulkar_Resume.pdf"
             className="btn btn-primary"
             aria-label="Download Bhargavi Choulkar Resume PDF"
